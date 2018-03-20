@@ -4,10 +4,6 @@ import styled from  'styled-components';
 import AppStoreImg from '../Images/appstore.png';
 import GoogleMarketImg from '../Images/googlemarket.png';
 import WindowsPhoneImg from '../Images/windowsphone.png';
-import SocialMedia from "./SocialMedia";
-
-
-
 
 
 const Nav = styled.div``;
@@ -37,7 +33,28 @@ const NavOther = styled.div`
   font-weight: bold;
 `;
 
+const Line = styled.hr`
+  margin: 0;
+  color: #E0E6E8;
+`;
 
+const Download = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+`;
+const DownloadImg = styled.img`
+  margin: 0;
+`;
+
+const AboutAviaSales = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Text = styled.div`
+  margin: 0;
+`;
 
 export default class Footer extends Component {
   render() {
@@ -107,7 +124,33 @@ export default class Footer extends Component {
               </Nav>
             </div>
           </div>
-          <SocialMedia/>
+
+
+
+          <div className="container">
+            <div className="row">
+              <AboutAviaSales className="col-xs-10">
+                <Text>O компании</Text>
+                <Text>Партнерская программа</Text>
+                <Text>Реклама</Text>
+                <Text>Вакансии</Text>
+                <Text>Помощь</Text>
+                <Text>Правила</Text>
+                <Text>White Label авиабилеты</Text>
+              </AboutAviaSales>
+              <Download className="">
+                <div>
+                  <DownloadImg src={AppStoreImg}/>
+                </div>
+                <div>
+                  <DownloadImg src={GoogleMarketImg}/>
+                </div>
+                <div>
+                  <DownloadImg src={WindowsPhoneImg}/>
+                </div>
+              </Download>
+            </div>
+          </div>
         </div>
     )
   }

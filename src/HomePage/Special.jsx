@@ -10,11 +10,16 @@ const SpecialBlock = styled.div`
 `;
 
 const TicketsSpecial= styled.h2`
-  
+  color: #FFFFFF;
+  margin:0;
+  padding: 16px 0 24px 0;
 `;
 
 const SpecialCard = styled.div`
-  
+  margin: 0 0 12px 0;
+  @media screen and (min-width: 768px) {
+    margin: 0 0 24px 0;
+  }
 `;
 
 const SpecialTitleCard = styled.h3`
@@ -43,7 +48,7 @@ const Offer = styled.div`
 `;
 
 const DaysAndPrice = styled.div`
-
+  text-align: right;
 `;
 
 const Price = styled.div`
@@ -82,32 +87,78 @@ export default class Special extends React.Component {
   render(){
     return (
       <SpecialBlock>
-        <TicketsSpecial>Спецпредложения на авиабилеты</TicketsSpecial>
-        <div className='col-xs-12 col-md-4'>
-          <SpecialCard>
-            <SpecialDescription>
-              <SpecialTitleCard>Билеты от 499 рублей!</SpecialTitleCard>
-              <Offer>
-                <div>
-                  <Img src={Pobeda}/>
-                </div>
-                <DaysAndPrice>
-                  <Price>от 499 р</Price>
-                  <DaysLeft>Осталось 45 дней</DaysLeft>
-                </DaysAndPrice>
-              </Offer>
-              <div>
-                <SpecialText>Билеты от 499 рублей! <br/> Специальное предложение <br/>от авиакомпании Победа</SpecialText>
-              </div>
-              <div className="col-xs-12">
-                <LearnMore>Узнать подробности</LearnMore>
-              </div>
-            </SpecialDescription>
-          </SpecialCard>
-
-
-          <WatchMore>Смотреть все спецпредложения</WatchMore>
-          <WatchMore>*средняя цена по направлению</WatchMore>
+        <div className='col-xs-12'>
+          <TicketsSpecial>Спецпредложения на авиабилеты</TicketsSpecial>
+        </div>
+        <div className="container">
+          <div className='row'>
+            <div className='col-xs-12 col-md-4'>
+              <SpecialCard>
+                <SpecialDescription>
+                  <SpecialTitleCard>Билеты от 499 рублей!</SpecialTitleCard>
+                  <Offer>
+                    <div>
+                      <Img src={Pobeda}/>
+                    </div>
+                    <DaysAndPrice>
+                      <Price>от 499 р</Price>
+                      <DaysLeft>Осталось 45 дней</DaysLeft>
+                    </DaysAndPrice>
+                  </Offer>
+                  <div>
+                    <SpecialText>Билеты от 499 рублей! <br/> Специальное предложение <br/>от авиакомпании Победа</SpecialText>
+                  </div>
+                  <div className="col-xs-12">
+                    <LearnMore>Узнать подробности</LearnMore>
+                  </div>
+                </SpecialDescription>
+              </SpecialCard>
+            </div>
+            <div className='col-xs-12 col-md-4'>
+              <SpecialCard>
+                <SpecialDescription>
+                  <SpecialTitleCard>Билеты от 499 рублей!</SpecialTitleCard>
+                  <Offer>
+                    <div>
+                      <Img src={Pobeda}/>
+                    </div>
+                    <DaysAndPrice>
+                      <Price>от 499 р</Price>
+                      <DaysLeft>Осталось 45 дней</DaysLeft>
+                    </DaysAndPrice>
+                  </Offer>
+                  <div>
+                    <SpecialText>Билеты от 499 рублей! <br/> Специальное предложение <br/>от авиакомпании Победа</SpecialText>
+                  </div>
+                  <div className="col-xs-12">
+                    <LearnMore>Узнать подробности</LearnMore>
+                  </div>
+                </SpecialDescription>
+              </SpecialCard>
+            </div>
+            <div className='col-xs-12 col-md-4'>
+              <SpecialCard>
+                <SpecialDescription>
+                  <SpecialTitleCard>Билеты от 499 рублей!</SpecialTitleCard>
+                  <Offer>
+                    <div>
+                      <Img src={Pobeda}/>
+                    </div>
+                    <DaysAndPrice>
+                      <Price>от 499 р</Price>
+                      <DaysLeft>Осталось 45 дней</DaysLeft>
+                    </DaysAndPrice>
+                  </Offer>
+                  <div>
+                    <SpecialText>Билеты от 499 рублей! <br/> Специальное предложение <br/>от авиакомпании Победа</SpecialText>
+                  </div>
+                  <div className="col-xs-12">
+                    <LearnMore>Узнать подробности</LearnMore>
+                  </div>
+                </SpecialDescription>
+              </SpecialCard>
+            </div>
+          </div>
         </div>
       </SpecialBlock>
     )

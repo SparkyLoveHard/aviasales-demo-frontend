@@ -6,6 +6,7 @@ import Special from "./Special";
 import HowBuy from "./HowBuy";
 import Footer from "./Footer";
 import BestPrice from "./BestPrice";
+import Download from "./Download";
 
 
 
@@ -20,6 +21,7 @@ export default class HomePage extends Component {
           <BestPrice/>
           <Special/>
           <HowBuy/>
+          <Download/>
           <Footer/>
         </div>
     )

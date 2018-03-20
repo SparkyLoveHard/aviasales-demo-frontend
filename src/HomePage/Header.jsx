@@ -17,7 +17,8 @@ const HeaderStyle = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin: 12px 0 47px 0;
+  padding-top: 12px;
+  margin: 0 0 47px 0;
   @media screen and (min-width: 768px){
     margin-bottom: 81px;
   }
@@ -51,7 +52,7 @@ const SearchTicketTitle = styled.h1`
   @media screen and (min-width: 320px){
     font-size: 20px;
   }
-      @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px){
     font-size: 32px;
   }
   @media screen and (min-width: 1024px){
@@ -76,47 +77,38 @@ const AviaTagline = styled.h2`
   }
 `;
 
-const CityOfDeparture = styled.input`
-  width: 100%;
-  margin: 0 0 2px 0;
-  border: none;
-  background: #fff url(${Arrow}) no-repeat 90%;
-`;
+const CityOfDeparture = styled.div`
+width: 100%;
+  @media screen and (min-width: 768px){
 
-const CityOfArrival = styled.input`
-  margin: 0 0 2px 0;
-  width: 100%;
-  border:none;
-`;
-
-const There = styled.input`
-  margin: 0 0 2px 0;
-  width: 50%;
-  border: none;
-  background: no-repeat ;
-  background: #fff url(${Calendar}) no-repeat 100%;
-  &:hover {
-    cursor:pointer;
   }
 `;
 
-const Back = styled.input`
-  margin: 0 0 2px 0;
-  width: 50%;
-  border:none;
-  background: #fff url(${Calendar}) no-repeat 80%;
-  &:hover {
-    cursor:pointer;
+const CityOfArrival = styled.div`
+width: 100%;
+    @media screen and (min-width: 768px){
+
   }
 `;
 
-const AddTickets = styled.input`
-  width: 100%;
-  border:none;
-  background: #fff url(${BlackArrow}) no-repeat 90%;
-  
-  &:hover {
-    cursor:pointer;
+const There = styled.div`
+width: 100%;
+    @media screen and (min-width: 768px){
+
+  }
+`;
+
+const Back = styled.div`
+width: 100%;
+    @media screen and (min-width: 768px){
+ 
+  }
+`;
+
+const AddTickets = styled.div`
+width: 100%;
+    @media screen and (min-width: 768px){
+
   }
 `;
 
@@ -164,41 +156,15 @@ const AircraftIcon = styled.img`
 
 const Header = () => (
   <HeaderStyle>
-    <div className="container">
-      <div className="row">
-        <div className="col-xs-12 col-md-12 col-lg-12">
-          <Logo>
-            <LogoImg src={logo}/>
-            <LogoText src={logoText}/>
-          </Logo>
-        </div>
-      </div>
-    </div>
-    <div>
-      <SearchTicketTitle>Поиск дешевых авиабилетов</SearchTicketTitle>
-      <AviaTagline>Лучший способ купить авиабилеты дешево</AviaTagline>
-    </div>
-    <form>
-      <label>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-offset-1 col-lg-offset-1 col-xs-12">
-              <CityOfDeparture type="text" placeholder="Город прибытия"/>
-              <CityOfArrival type="text" placeholder="Город прибытия"/>
-              <There placeholder="Туда"/>
-              <Back placeholder="Обратно"/>
-              <AddTickets/>
-            </div>
-          </div>
-        </div>
-        <Button className="col-xs-12">
-          <ButtonFindTickets>Найти билеты<AircraftIcon src={Aircraft}/></ButtonFindTickets>
-        </Button>
-      </label>
-    </form>
-
-
-
+    <Logo className="col-xs-12">
+      <LogoImg src={logo}/>
+      <LogoText src={logoText}/>
+    </Logo>
+    <SearchTicketTitle>Поиск дешевых авиабилетов</SearchTicketTitle>
+    <AviaTagline>Лучший способ купить авиабилеты дешево</AviaTagline>
+    <Button className="col-xs-12">
+      <ButtonFindTickets>Найти билеты<AircraftIcon src={Aircraft}/></ButtonFindTickets>
+    </Button>
   </HeaderStyle>
 );
 
