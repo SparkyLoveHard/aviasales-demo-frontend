@@ -32,9 +32,16 @@ const Card = styled.div`
 `;
 
 const CityImg = styled.img`
-  max-width: 100%;
+  height: 128px;
+  width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  @media screen and (min-width: 768px) {
+    height: 212px;
+  }
+  @media screen and (min-width: 992px) {
+    height: 212px;
+  }
 `;
 
 const CityAndCountry = styled.div`
@@ -59,17 +66,21 @@ const CityName = styled.p`
   margin: 0 0 0 16px;
   color: #5B5B5C;
 `;
+
 const CountryName = styled.p`
   margin: 0 0 0 16px;
   font-size: 12px;
   padding-top: 2px;
   color: #A0B0B9;
 `;
+
 const PriceAndDate = styled.div`
   margin: 12px 16px 16px 0;
 `;
+
 const Price = styled.p`
-  font-size: 16px;
+  font-family:Roboto,sans-serif;
+  font-size: 12px;
   margin: 0;
   color: #00BAE8;
 `;
@@ -84,6 +95,7 @@ const Description = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
 
 const CityCards = () => (

@@ -53,6 +53,9 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Path = styled.div`

@@ -9,7 +9,6 @@ import Calendar from '../Images/minicalendar.png';
 import Arrow from '../Images/arrow.svg';
 import BlackArrow from  '../Images/Shape.svg';
 
-
 const HeaderStyle = styled.div`
   background: linear-gradient(#00B0DE, #01AEDC,#02ABDB,#02ABDB,#02ABDB,#196EBD);
 `;
@@ -31,7 +30,6 @@ const LogoImg = styled.img`
   height: 30px;
   width: 30px;
   margin-right: 12px;
-
 `;
 
 const LogoText = styled.img`
@@ -48,7 +46,6 @@ const SearchTicketTitle = styled.h1`
   font-family: Roboto, sans-serif;
   font-size: 20px;
   color: #ffffff;
-  
   @media screen and (min-width: 320px){
     font-size: 20px;
   }
@@ -74,41 +71,6 @@ const AviaTagline = styled.h2`
   }
   @media screen and (min-width: 1024px){
     font-size: 24px;
-  }
-`;
-
-const CityOfDeparture = styled.div`
-width: 100%;
-  @media screen and (min-width: 768px){
-
-  }
-`;
-
-const CityOfArrival = styled.div`
-width: 100%;
-    @media screen and (min-width: 768px){
-
-  }
-`;
-
-const There = styled.div`
-width: 100%;
-    @media screen and (min-width: 768px){
-
-  }
-`;
-
-const Back = styled.div`
-width: 100%;
-    @media screen and (min-width: 768px){
- 
-  }
-`;
-
-const AddTickets = styled.div`
-width: 100%;
-    @media screen and (min-width: 768px){
-
   }
 `;
 
@@ -153,13 +115,16 @@ const AircraftIcon = styled.img`
   }
 `;
 
-
 const Header = () => (
   <HeaderStyle>
-    <Logo className="col-xs-12">
-      <LogoImg src={logo}/>
-      <LogoText src={logoText}/>
-    </Logo>
+    <div className="container">
+      <div className="row">
+        <Logo className="col-xs-12">
+          <LogoImg src={logo}/>
+          <LogoText src={logoText}/>
+        </Logo>
+      </div>
+    </div>
     <SearchTicketTitle>Поиск дешевых авиабилетов</SearchTicketTitle>
     <AviaTagline>Лучший способ купить авиабилеты дешево</AviaTagline>
     <Button className="col-xs-12">
@@ -167,8 +132,5 @@ const Header = () => (
     </Button>
   </HeaderStyle>
 );
-
-
-
 
 export default Header

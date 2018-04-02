@@ -5,6 +5,16 @@ import Aircraft from '../Images/aircraft.png'
 import Electron from '../Images/electron.png';
 import Advice from '../Images/advice.png';
 
+const HowBuySection = styled.div`
+  margin: 20px 0 24px 0;
+  @media screen and (min-width: 768px) {
+    margin: 16px 0 48px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 20px 0 40px 0;
+  }
+`;
+
 const Img = styled.img`
   margin: 0 10px 0 0;
 `;
@@ -29,7 +39,7 @@ const Text = styled.p`
 export default class HowBuy extends React.Component {
   render() {
     return (
-        <div>
+        <HowBuySection>
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
@@ -67,7 +77,7 @@ export default class HowBuy extends React.Component {
 
 
 
-        </div>
+        </HowBuySection>
     )
   }
 }
