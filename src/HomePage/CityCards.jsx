@@ -222,8 +222,8 @@ const CityCards = () => (
                     <Flag src={SpainFlag}/>
                   </div>
                   <div>
-                    <CityName>Краснодар</CityName>
-                    <CountryName>РОССИЯ</CountryName>
+                    <CityName>Барселона</CityName>
+                    <CountryName>ИСПАНИЯ</CountryName>
                   </div>
                 </CityAndCountry>
                 <PriceAndDate>
