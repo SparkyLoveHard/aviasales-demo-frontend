@@ -95,7 +95,6 @@ const Description = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 `;
 
 const CityCards = () => (
