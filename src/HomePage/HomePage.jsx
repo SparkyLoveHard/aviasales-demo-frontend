@@ -9,9 +9,6 @@ import BestPrice from "./BestPrice";
 import Download from "./Download";
 import Subscribe from "./Subscribe";
 
-
-
-
 export default class HomePage extends Component {
   render(){
     return (
