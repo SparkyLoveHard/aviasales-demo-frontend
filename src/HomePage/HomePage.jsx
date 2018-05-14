@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import BestPrice from "./BestPrice";
 import Download from "./Download";
 import Subscribe from "./Subscribe";
+import AviaAgencies from "./AviaAgencies";
 
 export default class HomePage extends Component {
   render(){
@@ -17,6 +18,7 @@ export default class HomePage extends Component {
           <MostPopular/>
           <CityCards/>
           <BestPrice/>
+          <AviaAgencies/>
           <Subscribe/>
           <Special/>
           <HowBuy/>

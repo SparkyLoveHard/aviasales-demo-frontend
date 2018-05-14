@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import Krasnodar from '../Images/krasnodar.png';
@@ -10,6 +10,11 @@ import Barcelona from '../Images/barcelona.jpg';
 
 import RussianFlag from '../Images/russiaflag.png';
 import SpainFlag from '../Images/spainflag.png';
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+
+import SearchPage from "../SearchPage/SearchPage";
 
 
 const Cards = styled.div`
@@ -95,147 +100,161 @@ const Description = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
 
-const CityCards = () => (
-    <Cards>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 '>
-            <Card>
-              <div>
-                <CityImg src={Krasnodar}/>
+export default class CityCards extends Component {
+  render() {
+    return (
+      <Router>
+        <Cards>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 '>
+                <Link to="/searchpage">
+                  <Route path="/searchpage" component={SearchPage}/>
+                  <Card>
+                    <div>
+                      <CityImg src={Krasnodar}/>
+                    </div>
+                    <Description>
+                      <CityAndCountry>
+                        <div>
+                          <Flag src={RussianFlag}/>
+                        </div>
+                        <div>
+                          <CityName>Краснодар</CityName>
+                          <CountryName>РОССИЯ</CountryName>
+                        </div>
+                      </CityAndCountry>
+                      <PriceAndDate>
+                        <Price>Найти от 1 212 р</Price>
+                        <Date>18 марта</Date>
+                      </PriceAndDate>
+                    </Description>
+                  </Card>
+                </Link>
               </div>
-              <Description>
-                <CityAndCountry>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+                <Card>
                   <div>
-                    <Flag src={RussianFlag}/>
+                    <CityImg src={Sochi}/>
                   </div>
-                  <div>
-                    <CityName>Краснодар</CityName>
-                    <CountryName>РОССИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 1 212 р</Price>
-                  <Date>18 марта</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
-          </div>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
-            <Card>
-              <div>
-                <CityImg src={Sochi}/>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={RussianFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Сочи (Адлер)</CityName>
+                        <CountryName>РОССИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 1 334 р</Price>
+                      <Date>27 марта</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
               </div>
-              <Description>
-                <CityAndCountry>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+                <Card>
                   <div>
-                    <Flag src={RussianFlag}/>
+                    <CityImg src={SaintPetersburg}/>
                   </div>
-                  <div>
-                    <CityName>Сочи (Адлер)</CityName>
-                    <CountryName>РОССИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 1 334 р</Price>
-                  <Date>27 марта</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
-          </div>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
-            <Card>
-              <div>
-                <CityImg src={SaintPetersburg}/>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={RussianFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Санкт-Петербург</CityName>
+                        <CountryName>РОССИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 1 508 р</Price>
+                      <Date>19 февраля</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
               </div>
-              <Description>
-                <CityAndCountry>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+                <Card>
                   <div>
-                    <Flag src={RussianFlag}/>
+                    <CityImg src={MineralnieVodi}/>
                   </div>
-                  <div>
-                    <CityName>Санкт-Петербург</CityName>
-                    <CountryName>РОССИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 1 508 р</Price>
-                  <Date>19 февраля</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
-          </div>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
-            <Card>
-              <div>
-                <CityImg src={MineralnieVodi}/>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={RussianFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Минеральные Воды</CityName>
+                        <CountryName>РОССИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 2 074 р</Price>
+                      <Date>18 марта</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
               </div>
-              <Description>
-                <CityAndCountry>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+                <Card>
                   <div>
-                    <Flag src={RussianFlag}/>
+                    <CityImg src={Simferopol}/>
                   </div>
-                  <div>
-                    <CityName>Минеральные Воды</CityName>
-                    <CountryName>РОССИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 2 074 р</Price>
-                  <Date>18 марта</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
-          </div>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
-            <Card>
-              <div>
-                <CityImg src={Simferopol}/>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={RussianFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Симферополь</CityName>
+                        <CountryName>РОССИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 2 407 р</Price>
+                      <Date>13 марта</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
               </div>
-              <Description>
-                <CityAndCountry>
+              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+                <Card>
                   <div>
-                    <Flag src={RussianFlag}/>
+                    <CityImg src={Barcelona}/>
                   </div>
-                  <div>
-                    <CityName>Симферополь</CityName>
-                    <CountryName>РОССИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 2 407 р</Price>
-                  <Date>13 марта</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
-          </div>
-          <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
-            <Card>
-              <div>
-                <CityImg src={Barcelona}/>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={SpainFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Барселона</CityName>
+                        <CountryName>ИСПАНИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 4 217 р</Price>
+                      <Date>24 марта</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
               </div>
-              <Description>
-                <CityAndCountry>
-                  <div>
-                    <Flag src={SpainFlag}/>
-                  </div>
-                  <div>
-                    <CityName>Барселона</CityName>
-                    <CountryName>ИСПАНИЯ</CountryName>
-                  </div>
-                </CityAndCountry>
-                <PriceAndDate>
-                  <Price>Найти от 4 217 р</Price>
-                  <Date>24 марта</Date>
-                </PriceAndDate>
-              </Description>
-            </Card>
+            </div>
           </div>
-        </div>
-      </div>
-    </Cards>
-);
+        </Cards>
+      </Router>
+    )
+  }
+}
 
-export default CityCards
+
+
+
+
+

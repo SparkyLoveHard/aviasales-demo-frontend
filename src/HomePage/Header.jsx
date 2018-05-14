@@ -118,26 +118,48 @@ const AircraftIcon = styled.img`
 
 const CityOfDeparture = styled.input`
   width: 100%;
+  border: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   @media screen and (min-width: 568px){
-    margin: 0 1px 0 0;
+    margin: 0 2px 0 0;
+    border-top-right-radius: unset;
+  }
+  @media screen and (min-width: 992px){
+    border-bottom-left-radius: 4px;
+    
   }
 `;
 
 const CityOfArrival = styled.input`
   width: 100%;
+  border: none;
+  @media screen and (min-width: 568px){
+    border-top-right-radius: 4px;
+  }
   @media screen and (min-width: 992px){
-    margin: 0 1px 0 0;
+    margin: 0 2px 0 0;
+    border-top-right-radius: unset;
   }
 `;
 const There = styled.input`
   width: 100%;
-  margin: 0 1px 0 0;
+  margin: 0 2px 0 0;
+  border: none;
+  @media screen and (min-width: 568px){
+    border-bottom-left-radius: 4px;
+  }
+  @media screen and (min-width: 992px){
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 4px;
+  }
 `;
 
 const Back = styled.input`
   width: 100%;
+  border: none;
   @media screen and (min-width: 568px){
-    margin: 0 1px 0 0;
+    margin: 0 2px 0 0;
   }
 `;
 
@@ -150,6 +172,15 @@ const Main = styled.div`
 const PassengerTickets = styled.select`
   display: flex;
   width: 100%;
+  border: none; 
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  @media screen and (min-width: 568px){
+    border-bottom-left-radius: unset;
+  }
+  @media screen and (min-width: 992px){
+    border-top-right-radius: 4px;
+  }
 `;
 
 
@@ -157,7 +188,7 @@ const DepartureLayout = styled.div`
   display: flex;
   width: 100%;
   height: 56px;
-  margin: 0 0 1px 0;
+  margin: 0 0 2px 0;
   @media screen and (min-width: 568px){
     width: 50%;
   }
@@ -170,7 +201,7 @@ const ArrivalLayout = styled.div`
   display:flex;
   width: 100%;
   height: 56px;
-  margin: 0 0 1px 0;
+  margin: 0 0 2px 0;
   @media screen and (min-width: 568px){
     width: 50%;
   }
@@ -183,7 +214,7 @@ const ThereLayout = styled.div`
   display:flex;
   width: 50%;
   height: 56px;
-  margin: 0 0 1px 0;
+  margin: 0 0 2px 0;
   
   @media screen and (min-width: 568px){
     width: 25%;
@@ -197,7 +228,7 @@ const BackLayout = styled.div`
   display:flex;
   width: 50%;
   height: 56px;
-  margin: 0 0 1px 0;
+  margin: 0 0 2px 0;
   @media screen and (min-width: 568px){
     width: 25%;
   }
