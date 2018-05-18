@@ -56,7 +56,6 @@ export default class AviaAgencies extends React.Component{
           <div className="row">
             <div className="col-md-12 col-lg-12">
               <div className="row">
-
                 <div className="col-md-1">
                   <img src={ArrowImgLeft} alt=""/>
                 </div>
@@ -76,19 +75,16 @@ export default class AviaAgencies extends React.Component{
                   <div>
                     <img src={ElAl} alt=""/>
                   </div>
-
                 </AgenciesSection>
                 <div className="col-md-offset-1 col-md-1">
                   <ArrowRight>
                     <img src={ArrowImgRight} alt=""/>
                   </ArrowRight>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-
       </AviaAgenciesSection>
     )
   }

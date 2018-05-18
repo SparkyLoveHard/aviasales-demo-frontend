@@ -148,6 +148,11 @@ const Inc = Download.extend`
   }
 `;
 
+
+const Link = styled.a`
+  
+`;
+
 export default class Footer extends Component {
   render() {
     return (
@@ -256,13 +261,19 @@ export default class Footer extends Component {
             <div className="col-lg-5">
               <Download>
                 <DownloadApp>
-                  <DownloadImg src={AppStoreImg}/>
+                  <Link href="https://itunes.apple.com/RU/app/id498958864?mt=8" target="_blank">
+                    <DownloadImg src={AppStoreImg}/>
+                  </Link>
                 </DownloadApp>
                 <DownloadApp>
-                  <DownloadImg src={GoogleMarketImg}/>
+                  <Link href="https://play.google.com/store/apps/details?id=ru.aviasales&referrer=af_tranid%3DSGg7nYTWey2z_WWA9gP7hg%26pid%3Dwww_footer_menu%26c%3Dgoogle%26af_sub1%3Dgoogle" target="_blank">
+                    <DownloadImg src={GoogleMarketImg}/>
+                  </Link>
                 </DownloadApp>
                 <DownloadApp>
-                  <DownloadImg src={WindowsPhoneImg}/>
+                  <Link href="https://www.microsoft.com/ru-ru/store/p/aviasales/9nblggh07vd6?rtc=1" target="_blank">
+                    <DownloadImg src={WindowsPhoneImg}/>
+                  </Link>
                 </DownloadApp>
               </Download>
               <Inc>© 2007–2018, Aviasales — дешевые авиабилеты</Inc>

@@ -58,7 +58,6 @@ const Button = styled.button`
   width: 140px;
 `;
 
-
 export default class Subscribe extends React.Component {
   render() {
     return (
@@ -87,11 +86,6 @@ export default class Subscribe extends React.Component {
               </div>
             </div>
           </div>
-
-
-
-
-
         </SubscribeSection>
       </div>
     )

@@ -11,11 +11,7 @@ import Barcelona from '../Images/barcelona.jpg';
 import RussianFlag from '../Images/russiaflag.png';
 import SpainFlag from '../Images/spainflag.png';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import PropTypes from 'prop-types';
-
-import SearchPage from "../SearchPage/SearchPage";
-
+import {Link} from "react-router-dom";
 
 const Cards = styled.div`
   font-family: Roboto,sans-serif;
@@ -36,11 +32,29 @@ const Card = styled.div`
   }
 `;
 
+const CityImgBlock = styled.div`
+  overflow:hidden;
+  max-height: 128px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  @media screen and (min-width: 768px) {
+    max-height: 212px;
+  }
+`;
+
 const CityImg = styled.img`
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
   height: 128px;
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  &:hover {
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -o-transform: scale(1.1);
+  }
   @media screen and (min-width: 768px) {
     height: 212px;
   }
@@ -96,6 +110,7 @@ const Date = styled.p`
   color: #A0B0B9;
   text-align: right;
 `;
+
 const Description = styled.div`
   display: flex;
   justify-content: space-between;
@@ -103,43 +118,46 @@ const Description = styled.div`
   
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 export default class CityCards extends Component {
   render() {
     return (
-      <Router>
-        <Cards>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 '>
-                <Link to="/searchpage">
-                  <Route path="/searchpage" component={SearchPage}/>
-                  <Card>
-                    <div>
-                      <CityImg src={Krasnodar}/>
-                    </div>
-                    <Description>
-                      <CityAndCountry>
-                        <div>
-                          <Flag src={RussianFlag}/>
-                        </div>
-                        <div>
-                          <CityName>Краснодар</CityName>
-                          <CountryName>РОССИЯ</CountryName>
-                        </div>
-                      </CityAndCountry>
-                      <PriceAndDate>
-                        <Price>Найти от 1 212 р</Price>
-                        <Date>18 марта</Date>
-                      </PriceAndDate>
-                    </Description>
-                  </Card>
-                </Link>
-              </div>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+      <Cards>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 '>
+              <StyledLink to="/search">
                 <Card>
-                  <div>
+                  <CityImgBlock>
+                    <CityImg src={Krasnodar}/>
+                  </CityImgBlock>
+                  <Description>
+                    <CityAndCountry>
+                      <div>
+                        <Flag src={RussianFlag}/>
+                      </div>
+                      <div>
+                        <CityName>Краснодар</CityName>
+                        <CountryName>РОССИЯ</CountryName>
+                      </div>
+                    </CityAndCountry>
+                    <PriceAndDate>
+                      <Price>Найти от 1 212 р</Price>
+                      <Date>18 марта</Date>
+                    </PriceAndDate>
+                  </Description>
+                </Card>
+              </StyledLink>
+            </div>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+              <StyledLink to="/search">
+                <Card>
+                  <CityImgBlock>
                     <CityImg src={Sochi}/>
-                  </div>
+                  </CityImgBlock>
                   <Description>
                     <CityAndCountry>
                       <div>
@@ -156,12 +174,14 @@ export default class CityCards extends Component {
                     </PriceAndDate>
                   </Description>
                 </Card>
-              </div>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+              </StyledLink>
+            </div>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+              <StyledLink to="/search">
                 <Card>
-                  <div>
+                  <CityImgBlock>
                     <CityImg src={SaintPetersburg}/>
-                  </div>
+                  </CityImgBlock>
                   <Description>
                     <CityAndCountry>
                       <div>
@@ -178,12 +198,14 @@ export default class CityCards extends Component {
                     </PriceAndDate>
                   </Description>
                 </Card>
-              </div>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
-                <Card>
-                  <div>
+              </StyledLink>
+            </div>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+              <Card>
+                <StyledLink to="/search">
+                  <CityImgBlock>
                     <CityImg src={MineralnieVodi}/>
-                  </div>
+                  </CityImgBlock>
                   <Description>
                     <CityAndCountry>
                       <div>
@@ -199,13 +221,15 @@ export default class CityCards extends Component {
                       <Date>18 марта</Date>
                     </PriceAndDate>
                   </Description>
-                </Card>
-              </div>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+                </StyledLink>
+              </Card>
+            </div>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1'>
+              <StyledLink to="search">
                 <Card>
-                  <div>
+                  <CityImgBlock>
                     <CityImg src={Simferopol}/>
-                  </div>
+                  </CityImgBlock>
                   <Description>
                     <CityAndCountry>
                       <div>
@@ -222,12 +246,14 @@ export default class CityCards extends Component {
                     </PriceAndDate>
                   </Description>
                 </Card>
-              </div>
-              <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+              </StyledLink>
+            </div>
+            <div className='col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-0'>
+              <StyledLink to="/search">
                 <Card>
-                  <div>
+                  <CityImgBlock>
                     <CityImg src={Barcelona}/>
-                  </div>
+                  </CityImgBlock>
                   <Description>
                     <CityAndCountry>
                       <div>
@@ -244,11 +270,11 @@ export default class CityCards extends Component {
                     </PriceAndDate>
                   </Description>
                 </Card>
-              </div>
+              </StyledLink>
             </div>
           </div>
-        </Cards>
-      </Router>
+        </div>
+      </Cards>
     )
   }
 }
