@@ -1,26 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import arrow from './ArrowNav.svg';
 
 const TransplantationSection = styled.div`
   font-family: Roboto,sans-serif;
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   display: flex;
-  padding: 16px 0 0 16px;
+  margin: 0 0 0 0;
+  padding: 16px 0 16px 0;
   cursor: pointer;
+  border-bottom: 1px solid #DDDDDD;
 `;
 
-const TitleArrow = styled.img`
-  &:hover {
-    transform: rotate(45deg);
-  }
-  
+export const TitleArrow = styled.img`
+  margin: 0 0 0 16px;
 `;
 
-const TitleText = styled.h3`
+
+export const TitleText = styled.h3`
   margin: 0;
   font-size: 12px;
   color: #5B5B5C;
@@ -31,7 +30,6 @@ const CheckBoxes = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 12px;
-
 `;
 
 const TransplantationAndPrice = styled.div`
@@ -39,8 +37,6 @@ const TransplantationAndPrice = styled.div`
   justify-content: space-between;
   padding: 0 16px 0 16px;
 `;
-
-
 
 class TransplantationToggle extends React.Component {
   render() {
@@ -97,13 +93,11 @@ export default class Transplantation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {show: true};
-
     this.toggleDiv = this.toggleDiv.bind(this);
   }
 
   toggleDiv = () => {
     const {show} = this.state;
-
     this.setState({show: !show})
   };
 
@@ -111,10 +105,20 @@ export default class Transplantation extends React.Component {
     return (
       <TransplantationSection>
         <Title onClick={this.toggleDiv}>
-         <TitleArrow src={arrow}/><TitleText>Пересадки</TitleText>
+         <TitleArrow src={arrow}/><TitleText>ПЕРЕСАДКИ</TitleText>
         </Title>
         {this.state.show && <TransplantationToggle/>}
       </TransplantationSection>
     )
   }
 }
+
+
+
+
+
+
+
+
+
+

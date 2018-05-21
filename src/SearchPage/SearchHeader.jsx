@@ -109,6 +109,7 @@ export default class SearchHeader extends React.Component {
   render() {
     return (
       <HeaderStyle>
+
         <LogoImgSearch src={logo}/>
           <div className="container">
             <div className="row">
@@ -146,6 +147,8 @@ export default class SearchHeader extends React.Component {
 
             </div>
           </div>
+
+
       </HeaderStyle>
     )
   }

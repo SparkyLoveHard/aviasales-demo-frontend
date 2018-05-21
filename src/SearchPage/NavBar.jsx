@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 import Transplantation from "./components/Transplantation";
 import Baggage from "./components/Baggage";
+import DepartureAndArrival from "./components/DepartureAndArrival";
+import Airports from "./components/Airports";
+import AirportTransplantation from "./components/AirportTransplantation";
+import Airlines from "./components/Airlines";
+import DurationOfTransplantation from "./components/DurationOfTransplantation";
+import TravaelTime from "./components/TravaelTime";
 
 
 const NavBarSection = styled.div`
@@ -17,9 +23,14 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <NavBarSection>
-          <Transplantation/>
-          <Baggage/>
-
+        <Transplantation/>
+        <DepartureAndArrival/>
+        <Baggage/>
+        <DurationOfTransplantation/>
+        <TravaelTime/>
+        <Airlines/>
+        <Airports/>
+        <AirportTransplantation/>
       </NavBarSection>
     )
   }

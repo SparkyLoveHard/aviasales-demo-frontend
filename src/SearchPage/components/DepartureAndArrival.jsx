@@ -1,16 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import {Title} from './Transplantation'
 import {TitleText} from './Transplantation'
 import {TitleArrow} from './Transplantation'
 import arrow from './ArrowNav.svg';
 
-export default class Baggage extends React.Component {
+export default class DepartureAndArrival extends React.Component {
   render() {
     return (
       <div>
         <Title>
-          <TitleArrow src={arrow}/><TitleText>БАГАЖ</TitleText>
+          <TitleArrow src={arrow}/><TitleText>ВРЕМЯ ВЫЛЕТА И ПРИБЫТИЯ</TitleText>
         </Title>
       </div>
     )
