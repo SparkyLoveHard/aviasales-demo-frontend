@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import arrow from '../Images/ArrowNav.svg';
 
-export default class AirportTransplantation extends React.Component {
+export default class TravelTime extends React.Component {
   render() {
     return (
       <div>
