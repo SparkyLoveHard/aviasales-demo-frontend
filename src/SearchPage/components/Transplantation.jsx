@@ -1,92 +1,49 @@
 import React from 'react';
-import styled from 'styled-components';
-import arrow from '../Images/ArrowNav.svg';
-import {Title} from "../NavBar";
-import {TitleArrow} from "../NavBar";
-import {TitleBlock} from "../NavBar";
-import {TitleText} from "../NavBar";
+import styled from 'styled-components'
 
-const TransplantationSection = styled.div`
-  font-family: Roboto,sans-serif;
-`;
-
-const CheckBoxes = styled.div`
+const TransplantationBlock = styled.div`
   display: flex;
-  flex-direction: column;
-  font-size: 12px;
-`;
-
-const TransplantationAndPrice = styled.div`
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding: 0 16px 0 16px;
 `;
+const TransplantationText = styled.p`
+  margin: 0;
+  font-family: Roboto,sans-serif;
+  font-size: 12px;
+`;
+const CheckBox = styled.input`
+ 
+`;
+const Label = styled.label`
+  display: flex;
+`;
 
-
-
-class TransplantationToggle extends React.Component{
-  render(){
-    return (
-    <div>
-      <CheckBoxes>
-        <TransplantationAndPrice>
-          <div>
-            <input type="checkbox"/><span>Все</span>
-          </div>
-          <div>77770 r</div>
-        </TransplantationAndPrice>
-        <TransplantationAndPrice>
-          <div>
-            <input type="checkbox"/><span>Без пересадок</span>
-          </div>
-          <div>77770 r</div>
-        </TransplantationAndPrice>
-        <TransplantationAndPrice>
-          <div>
-            <input type="checkbox"/><span>1 пересадка</span>
-          </div>
-          <div>77770 r</div>
-        </TransplantationAndPrice>
-        <TransplantationAndPrice>
-          <div>
-            <input type="checkbox"/><span>2 пересадки</span>
-          </div>
-          <div>77770 r</div>
-        </TransplantationAndPrice>
-        <TransplantationAndPrice>
-          <div>
-            <input type="checkbox"/><span>3 пересадки</span>
-          </div>
-          <div>77770 </div>
-        </TransplantationAndPrice>
-      </CheckBoxes>
-    </div>
-    )
-  }
-}
-
+const CheckMark = styled.span`
+  
+`;
 
 export default class Transplantation extends React.Component {
-  state = {
-    toggle: false
-  };
-
-  toggle = () => {
-    this.setState({
-      toggle: !this.state.toggle
-    })
-  };
-
   render() {
+    const TransplantationName = (props) => {
+      return (
+        <TransplantationBlock>
+          <Label className='container-s'>
+            <CheckBox type="checkbox"/><TransplantationText>{props.name}</TransplantationText>
+            <CheckMark className='checkmark' for='input'/>
+          </Label>
+        </TransplantationBlock>
+      )
+    };
+
+
     return (
-      <TransplantationSection>
-        <TitleBlock>
-          <Title onClick={this.toggle}>
-            <TitleArrow src={arrow}/> <TitleText>ПЕРЕСАДКИ</TitleText>
-          </Title>
-          {this.state.toggle && <TransplantationToggle/>}
-        </TitleBlock>
-      </TransplantationSection>
+      <div>
+        <TransplantationName name="Все"/>
+        <TransplantationName name="Без пересадок"/>
+        <TransplantationName name="1 пересадка"/>
+        <TransplantationName name="2 пересадки"/>
+        <TransplantationName name="3 пересадки"/>
+      </div >
     )
   }
 }

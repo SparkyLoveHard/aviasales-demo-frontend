@@ -9,8 +9,9 @@ import AirportTransplantation from "./components/AirportTransplantation";
 import Airlines from "./components/Airlines";
 import DurationOfTransplantation from "./components/DurationOfTransplantation";
 import TravelTime from "./components/TravelTime";
-
 import arrow from './Images/ArrowNav.svg'
+
+import ToggleClickBlock from "./TogglableBlock";
 
 const NavBarSection = styled.div`
   display: none;
@@ -53,9 +54,7 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <NavBarSection>
-        <Transplantation/>
-        <DepartureAndArrival/>
-        <Baggage/>
+        <ToggleClickBlock/>
       </NavBarSection>
     )
   }

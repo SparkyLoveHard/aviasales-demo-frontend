@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Android from '../Images/android.png'
-import Apple from '../Images/apple.png'
-import Windows from '../Images/windows.png'
-import Phone from '../Images/iphone-big.png'
-import Star from  '../Images/star.png';
-import HalfStar from  '../Images/half-star.png';
+import Android from './Images/android.png';
+import Apple from './Images/apple.png';
+import Windows from './Images/windows.png';
+import Phone from './Images/iphone-big.png';
+import Star from './Images/star.png';
+import HalfStar from './Images/half-star.png';
 
 const Section = styled.div`
   background: linear-gradient(137.4deg, #00b0de 4.18%, #196ebd 104.18%);
@@ -47,6 +47,7 @@ const PhoneText = styled.div`
   color: #fff;
   font-size: 14px;
   margin: 0 0 0 8px;
+  cursor: pointer;
 `;
 
 const PhoneLayout = styled.div`
@@ -70,7 +71,6 @@ const DownloadLinks = styled.div`
   }
   @media screen and (min-width: 992px) {
     padding: 48px 0 68px 0;
-    
   }
 `;
 
@@ -79,6 +79,7 @@ const DownloadLink = styled.div`
   flex-direction: row;
   align-items: center;
   margin: 0 0 20px 0;
+  cursor: pointer;
   &:nth-last-child(1) {
     margin: 0;
   }
@@ -122,57 +123,73 @@ const Stars = styled.div`
   margin: 0 6px 0 0;
 `;
 
-export default class Download extends React.Component {
-  render() {
-    return (
-      <Section>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4 col-lg-3 col-lg-offset-1">
-              <PhoneLayout className="">
-                <PhoneImg src={Phone}/>
-              </PhoneLayout>
-            </div>
-            <DownloadPhone className="col-md-8">
-              <Title>Скачай мобильное приложение Aviasales.ru</Title>
-              <Rating className="">
-                <Stars>
-                  <img src={Star} alt=""/>
-                </Stars>
-                <Stars>
-                  <img src={Star} alt=""/>
-                </Stars>
-                <Stars>
-                  <img src={Star} alt=""/>
-                </Stars>
-                <Stars>
-                  <img src={Star} alt=""/>
-                </Stars>
-                <Stars>
-                  <img src={Star} alt=""/>
-                </Stars>
-                <span>Более 103 000 оценок</span>
-              </Rating>
-              <div className="row">
-                <div className="col-xs-offset-6 col-xs-6 col-md-offset-0 col-md-12">
-                  <DownloadLinks>
-                    <DownloadLink>
-                      <div>
-                        <img src={Apple}/>
-                      </div>
-                      <PhoneText>iPhone или iPad</PhoneText>
-                    </DownloadLink>
-                    <Line/>
-                    <DownloadLink><img src={Android}/><PhoneText>Android</PhoneText></DownloadLink>
-                    <Line/>
-                    <DownloadLink><img src={Windows}/><PhoneText>Windows Phone</PhoneText></DownloadLink>
-                  </DownloadLinks>
-                </div>
-              </div>
-            </DownloadPhone>
+const Download = () => {
+  return (
+    <Section>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4 col-lg-3 col-lg-offset-1">
+            <PhoneLayout className="">
+              <PhoneImg src={Phone} />
+            </PhoneLayout>
           </div>
+          <DownloadPhone className="col-md-8">
+            <Title>
+              Скачай мобильное приложение Aviasales.ru
+            </Title>
+            <Rating className="">
+              <Stars>
+                <img src={Star} alt="" />
+              </Stars>
+              <Stars>
+                <img src={Star} alt="" />
+              </Stars>
+              <Stars>
+                <img src={Star} alt="" />
+              </Stars>
+              <Stars>
+                <img src={Star} alt="" />
+              </Stars>
+              <Stars>
+                <img src={HalfStar} alt="" />
+              </Stars>
+              <span>
+                Более 103 000 оценок
+              </span>
+            </Rating>
+            <div className="row">
+              <div className="col-xs-offset-6 col-xs-6 col-md-offset-0 col-md-12">
+                <DownloadLinks>
+                  <DownloadLink>
+                    <div>
+                      <img src={Apple} alt="Apple" />
+                    </div>
+                    <PhoneText>
+                      iPhone или iPad
+                    </PhoneText>
+                  </DownloadLink>
+                  <Line />
+                  <DownloadLink>
+                    <img src={Android} alt="Android" />
+                    <PhoneText>
+                      Android
+                    </PhoneText>
+                  </DownloadLink>
+                  <Line />
+                  <DownloadLink>
+                    <img src={Windows} alt="Windows Phone" />
+                    <PhoneText>
+                      Windows Phone
+                    </PhoneText>
+                  </DownloadLink>
+                </DownloadLinks>
+              </div>
+            </div>
+          </DownloadPhone>
         </div>
-      </Section>
-    )
-  }
+      </div>
+    </Section>
+  );
 };
+
+export default Download;
