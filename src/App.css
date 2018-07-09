@@ -1,0 +1,35 @@
+.Label {
+  position: relative;
+  cursor: pointer;
+}
+
+.Input {
+  display: none;
+}
+
+.Label:before {
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #00ACE2;
+}
+
+.Input:checked + label:before {
+  content: '';
+}
+
+.Input:checked + .Label:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #00ACE2;
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  background: url("../src/SearchPage/Images/checkbox-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

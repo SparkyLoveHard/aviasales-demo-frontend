@@ -3,7 +3,8 @@
   "extends": "airbnb",
   "rules": {
     "global-require": 0,
-    "arrow-body-style": ["error", "always"]
+    "arrow-body-style": ["error", "as-needed"],
+    "react/destructuring-assignment": [<enabled>, "never"]
 },
   "env": {
   "browser": true

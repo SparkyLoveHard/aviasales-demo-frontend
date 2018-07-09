@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-
-// IMAGE
-import Russia from './Images/Russia.png'
-import Pinned from './Images/pin.svg'
+import Pinned from './Images/pin.svg';
 import TakeOff from './Images/takeoff.png';
 import Landing from './Images/landing.png';
 import Arrow from './Images/arrow.png';
-import NoBaggage from './Images/no-baggage.png'
-import Bag from './Images/no-bag.svg';
-import Baggage from "./components/Baggage";
+// import NoBaggage from './Images/no-baggage.png'
+// import Bag from './Images/no-bag.svg';
+// import Baggage from "./components/Baggage";
 import ArrowBut from './Images/ArrowButton.svg';
+
+import { TICKETS_INFO } from './TicketsInformation';
+
 
 const Card = styled.div`
   display: flex;
@@ -48,10 +48,10 @@ const ButtonBuyTicket = styled.button`
 `;
 
 const AirLineCompanyImg = styled.img`
-  margin: 0 0 0 16px;
+  margin: 16px 0 0 16px;
 `;
 
-const PinnedImg =  styled.img`
+const PinnedImg = styled.img`
   display: inline-block;
   margin: 0 8px 0 0;
   height: 20px;
@@ -80,6 +80,7 @@ const TotalHours = styled.div`
 const CardInfoTop = styled.div`
   display: flex;
   justify-content: space-between;
+  
 `;
 
 const Flight = styled.div`
@@ -94,7 +95,7 @@ const TimeLine = styled.div`
   width: 205px;
 `;
 
-const FlightInput  = styled.div`
+const FlightInput = styled.div`
   display: flex;
   align-items: center;
   margin: 12px 0 14px 0;
@@ -153,66 +154,78 @@ const BuyOnCompany = styled.p`
   font-size: 12px;
 `;
 
-export const TICKETS_INFO = [
-  {
-    airlinesCompanyImg: Russia,
-    ticketPrice:'7712р',
-    buyOn: 'Clickavia',
-    timeCityDeparture: '00:05',
-    nameCityDeparture: 'Москва',
-    dateCityDeparture: '24 фев 2018, Сб',
-    timeCityArrival: '03:05',
-    nameCityArrival: 'Барселона',
-    dateCityArrival: '24 фев 2018, Сб',
-    timeFlight: '5ч',
+const ShowMore = styled.button`
+  width: 100%;
+  font-size: 14px;
+  color: white;
+  background-color: #00ACDE;
+  padding: 18px 0;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+`;
 
-    categoryTicket: ''
-  }
-];
+const CharterButton = styled.button`
+  padding: 4px 12px 4px 12px;
+  border-radius: 15px;
+  background-color: inherit;
+  font-size: 10px;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  margin: 20px 14px 0 0;
+  cursor: pointer;
+`;
+
+const CharterImgArrow = styled.img`
+  cursor: pointer;
+`;
 
 class Ticket extends React.Component {
   render() {
-    const {data: {
-      airlinesCompanyImg, ticketPrice, buyOn,
+    const {data: { airlinesCompanyImg, ticketPrice, buyOn,
       timeCityDeparture, nameCityDeparture, dateCityDeparture,
       timeFlight, timeCityArrival, nameCityArrival, dateCityArrival,
-    }} = this.props;
+    },
+    } = this.props;
     return (
       <Card>
-        <CardInfoBuy className='button_sec'>
-          <div className='chemodani'>
-
-          </div>
-          <ButtonBuyTicket>Купить<br/> за {ticketPrice}</ButtonBuyTicket>
+        <CardInfoBuy>
+          <ButtonBuyTicket>Купить<br /> за {ticketPrice}</ButtonBuyTicket>
           <BuyOnCompany>на {buyOn}</BuyOnCompany>
         </CardInfoBuy>
-        <BetweenLine/>
-        <CardInfo className='card_section'>
+        <BetweenLine />
+        <CardInfo>
           <CardInfoTop>
             <div>
-              <AirLineCompanyImg src={airlinesCompanyImg} alt=""/>
+              <AirLineCompanyImg src={airlinesCompanyImg} alt="" />
             </div>
             <div>
-              <button>charter</button>
-              <img src={Arrow} alt=""/>
+              <CharterButton>
+                ЧАРТЕР
+              </CharterButton>
+              <CharterImgArrow src={Arrow} alt="arrow" />
             </div>
           </CardInfoTop>
           <CardMainInfo>
             <Departure>
-              <TimeText className='p'><PinnedImg src={Pinned} alt=""/>{timeCityDeparture}</TimeText>
-              <NameCity className='p'>{nameCityDeparture}</NameCity>
-              <Text className='p'>{dateCityDeparture}</Text>
+              <TimeText><PinnedImg src={Pinned} alt="" />{timeCityDeparture}</TimeText>
+              <NameCity>{nameCityDeparture}</NameCity>
+              <Text>{dateCityDeparture}</Text>
             </Departure>
             <SchemeFlight>
               <Flight>
-                <div><img src={TakeOff} alt=""/></div>
+                <div>
+                  <img src={TakeOff} alt="" />
+                </div>
                 <TotalHours>Всего: {timeFlight}</TotalHours>
-                <div><img src={Landing} alt=""/></div>
+                <div>
+                  <img src={Landing} alt="" />
+                </div>
               </Flight>
               <FlightInput>
-                <input type='radio'/>
-                <TimeLine/>
-                <input type='radio'/>
+                <input type="radio" />
+                <TimeLine />
+                <input type="radio" />
               </FlightInput>
               <Airports>
                 <div>VKO</div>
@@ -220,75 +233,115 @@ class Ticket extends React.Component {
               </Airports>
             </SchemeFlight>
             <Arrival>
-              <TimeText className='p'>{timeCityArrival}</TimeText>
-              <NameCity className='p'>{nameCityArrival}</NameCity>
-              <Text className='p'>{dateCityArrival}</Text>
+              <TimeText>{timeCityArrival}</TimeText>
+              <NameCity>{nameCityArrival}</NameCity>
+              <Text>{dateCityArrival}</Text>
             </Arrival>
           </CardMainInfo>
-          <CardInfoBetweenLine/>
+          <CardInfoBetweenLine />
           <CardMainInfo>
             <Departure>
-              <TimeText className='p'><PinnedImg src={Pinned} alt=""/>{timeCityDeparture}</TimeText>
-              <NameCity className='p'>{nameCityDeparture}</NameCity>
-              <Text className='p'>{dateCityDeparture}</Text>
+              <TimeText><PinnedImg src={Pinned} alt="pinned" />{timeCityDeparture}</TimeText>
+              <NameCity>{nameCityDeparture}</NameCity>
+              <Text>{dateCityDeparture}</Text>
             </Departure>
             <SchemeFlight>
               <Flight>
-                <div><img src={TakeOff} alt=""/></div>
+                <div>
+                  <img src={TakeOff} alt="" />
+                </div>
                 <TotalHours>5 часов</TotalHours>
-                <div><img src={Landing} alt=""/></div>
+                <div>
+                  <img src={Landing} alt="" />
+                </div>
               </Flight>
               <FlightInput>
-                <input type='radio'/>
-                <TimeLine/>
-                <input type='radio'/>
+                <input type="radio" />
+                <TimeLine />
+                <input type="radio" />
               </FlightInput>
               <Airports>
-                <div>VKO</div>
-                <div>BCN</div>
+                <div>
+                  VKO
+                </div>
+                <div>
+                  BCN
+                </div>
               </Airports>
             </SchemeFlight>
             <Arrival>
-              <TimeText className='p'>{timeCityArrival}</TimeText>
-              <NameCity className='p'>{nameCityArrival}</NameCity>
-              <Text className='p'>{dateCityArrival}</Text>
+              <TimeText>
+                {timeCityArrival}
+              </TimeText>
+              <NameCity>
+                {nameCityArrival}
+              </NameCity>
+              <Text>
+                {dateCityArrival}
+              </Text>
             </Arrival>
           </CardMainInfo>
         </CardInfo>
         <TicketOpenerSection>
-          <TicketButtonOpener><img src={ArrowBut} alt=""/></TicketButtonOpener>
+          <TicketButtonOpener>
+            <img src={ArrowBut} alt="" />
+          </TicketButtonOpener>
         </TicketOpenerSection>
       </Card>
-    )
+    );
   }
 }
 
-class TicketCard extends React.Component{
+class TicketCard extends React.Component {
   render() {
-    let data = this.props.data;
-    let cardTemplate;
-    cardTemplate = data.map(function (item, index) {
+    const data = this.props.data;
+    const cardTemplate = data.map(function(item, index) {
       return (
         <div key={index}>
-          <Ticket data={item}/>
+          <Ticket data={item} />
         </div>
-      )
+      );
     });
     return (
       <div>
         {cardTemplate}
       </div>
-    )
+    );
   }
 }
 
+class ShowMoreButton extends React.Component {
+  render() {
+    return (
+      <ShowMore>
+        ПОКАЗАТЬ ЕЩЕ 10 БИЛЕТОВ!
+      </ShowMore>
+    );
+  }
+}
 
 export default class TicketsSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Show: '',
+    };
+    this.handleClickShow = this.handleClickShow.bind(this);
+  }
+  handleClickShow() {
+    this.setState({
+      Show: true,
+    });
+  }
+
   render() {
     return (
       <div>
-        <TicketCard data={TICKETS_INFO}/>
+        <TicketCard data={TICKETS_INFO} />
+        <ShowMoreButton onClick={this.handleClickShow}>
+          {this.state.Show}
+        </ShowMoreButton>
       </div>
-    )
+    );
   }
 }
