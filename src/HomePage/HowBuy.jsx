@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Aircraft from './Images/aircraft.png';
 import Electron from './Images/electron.png';
 import Advice from './Images/advice.png';
@@ -49,9 +48,7 @@ const HowBuy = () => {
           <div className="col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
             <Title>
               <Img src={Aircraft} />
-              <HowBuyTitle>
-                КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?
-              </HowBuyTitle>
+              <HowBuyTitle>КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?</HowBuyTitle>
             </Title>
             <Text>
               Avisales.ru - это метапоисковик авиабилетов. Мы ищем билеты на
@@ -64,17 +61,13 @@ const HowBuy = () => {
               дешевые билеты на самоет в Европу, Азию и на другие континенты. Мы
               написали для вас простую инструкцию о том, как пользоваться
               поиском и экономить на перелетах от 1000 до 20 000 руб в год.
-              <MoreInfo>
-                Подробнее
-              </MoreInfo>
+              <MoreInfo>Подробнее</MoreInfo>
             </Text>
           </div>
           <div className="col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
             <Title>
               <Img src={Electron} />
-              <HowBuyTitle>
-                ЭЛЕКТРОННЫЙ АВИАБИЛЕТ
-              </HowBuyTitle>
+              <HowBuyTitle>ЭЛЕКТРОННЫЙ АВИАБИЛЕТ</HowBuyTitle>
             </Title>
             <Text>
               Электронный авиабилет - это, по сути, обычный билет на самолет, но
@@ -89,17 +82,13 @@ const HowBuy = () => {
               регистрации на рейс пассажир должен предъявить маршру-квитанцию
               вместе с удостоверением личности точно так же, как предъявляют
               обыкновенный онлайн, стоит дешевле своего бумажного аналога.
-              <MoreInfo>
-                Подробнее
-              </MoreInfo>
+              <MoreInfo>Подробнее</MoreInfo>
             </Text>
           </div>
           <div className="col-xs-12 col-md-12 col-lg-10 col-lg-offset-1">
             <Title>
               <Img src={Advice} />
-              <HowBuyTitle>
-                20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ
-              </HowBuyTitle>
+              <HowBuyTitle>20 СОВЕТОВ АВИАПУТЕШЕСТВЕННИКАМ</HowBuyTitle>
             </Title>
             <Text>
               Есть масса путеводителей оп странам, но ни одного о том, как
@@ -107,9 +96,7 @@ const HowBuy = () => {
               максимально комфортным, мы написали 20 советов о подготовке к
               путеществию. Ведь настоящее путешествие начинается со слов Добро
               пожаловать на борт нашего самолета!
-              <MoreInfo>
-                Подробнее
-              </MoreInfo>
+              <MoreInfo>Подробнее</MoreInfo>
             </Text>
           </div>
         </div>

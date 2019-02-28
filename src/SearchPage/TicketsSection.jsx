@@ -196,13 +196,9 @@ class Ticket extends React.Component {
         <BetweenLine />
         <CardInfo>
           <CardInfoTop>
+            <AirLineCompanyImg src={airlinesCompanyImg} alt="" />
             <div>
-              <AirLineCompanyImg src={airlinesCompanyImg} alt="" />
-            </div>
-            <div>
-              <CharterButton>
-                ЧАРТЕР
-              </CharterButton>
+              <CharterButton>ЧАРТЕР</CharterButton>
               <CharterImgArrow src={Arrow} alt="arrow" />
             </div>
           </CardInfoTop>
@@ -214,13 +210,9 @@ class Ticket extends React.Component {
             </Departure>
             <SchemeFlight>
               <Flight>
-                <div>
-                  <img src={TakeOff} alt="" />
-                </div>
+                <img src={TakeOff} alt="" />
                 <TotalHours>Всего: {timeFlight}</TotalHours>
-                <div>
-                  <img src={Landing} alt="" />
-                </div>
+                <img src={Landing} alt="" />
               </Flight>
               <FlightInput>
                 <input type="radio" />
@@ -247,13 +239,9 @@ class Ticket extends React.Component {
             </Departure>
             <SchemeFlight>
               <Flight>
-                <div>
-                  <img src={TakeOff} alt="" />
-                </div>
+                <img src={TakeOff} alt="" />
                 <TotalHours>5 часов</TotalHours>
-                <div>
-                  <img src={Landing} alt="" />
-                </div>
+                <img src={Landing} alt="" />
               </Flight>
               <FlightInput>
                 <input type="radio" />
@@ -261,24 +249,14 @@ class Ticket extends React.Component {
                 <input type="radio" />
               </FlightInput>
               <Airports>
-                <div>
-                  VKO
-                </div>
-                <div>
-                  BCN
-                </div>
+                <div>VKO</div>
+                <div>BCN</div>
               </Airports>
             </SchemeFlight>
             <Arrival>
-              <TimeText>
-                {timeCityArrival}
-              </TimeText>
-              <NameCity>
-                {nameCityArrival}
-              </NameCity>
-              <Text>
-                {dateCityArrival}
-              </Text>
+              <TimeText>{timeCityArrival}</TimeText>
+              <NameCity>{nameCityArrival}</NameCity>
+              <Text>{dateCityArrival}</Text>
             </Arrival>
           </CardMainInfo>
         </CardInfo>
@@ -313,9 +291,7 @@ class TicketCard extends React.Component {
 class ShowMoreButton extends React.Component {
   render() {
     return (
-      <ShowMore>
-        ПОКАЗАТЬ ЕЩЕ 10 БИЛЕТОВ!
-      </ShowMore>
+      <ShowMore>ПОКАЗАТЬ ЕЩЕ 10 БИЛЕТОВ!</ShowMore>
     );
   }
 }

@@ -2,12 +2,9 @@ import React from 'react';
 import './App.css';
 import 'normalize.css';
 import 'flexboxgrid2';
-
 import { Switch, Route } from 'react-router-dom';
-
 import HomePage from './HomePage/HomePage';
 import SearchPage from './SearchPage/SearchPage';
-
 
 const App = () => {
   return (
