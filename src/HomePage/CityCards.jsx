@@ -42,17 +42,13 @@ const CityImgBlock = styled.div`
 `;
 
 const CityImg = styled.img`
-  -moz-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   height: 128px;
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   &:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    transform: scale(1.1); 
   }
   @media screen and (min-width: 768px) {
     height: 212px;

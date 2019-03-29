@@ -3,15 +3,13 @@ import styled from 'styled-components';
 import CalendarIcon from '../Images/minicalendar.png';
 
 export const BackInput = styled.input`
-width: 100%;
-border: none;
-padding: 18px 0 18px 16px;
-
+  width: 100%;
+  border: none;
+  padding: 18px 0 18px 16px;
 @media screen and (min-width: 568px) {
   margin: 0 2px 0 0;
 }
 `;
-
 
 export const BackLayout = styled.div`
   display: flex;
@@ -26,8 +24,7 @@ export const BackLayout = styled.div`
   }
 `;
 
-
-const CalendarImgLayout = styled.div`
+export const CalendarImgLayout = styled.div`
   display: flex;
   position: absolute;
   right: 0;

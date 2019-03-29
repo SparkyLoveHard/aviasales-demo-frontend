@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ArrivalLayout, CityOfArrival } from '../../../HomePage/components/Arrival';
 
-export const ArrivalLayout = styled.div`
+export const SearchArrivalLayout = styled(ArrivalLayout)`
   display: flex;
   width: 100%;
   margin: 0 0 2px 0;
@@ -13,7 +14,7 @@ export const ArrivalLayout = styled.div`
   }
 `;
 
-export const CityOfArrival = styled.input`
+export const SearchCityOfArrival = styled(CityOfArrival)`
   width: 100%;
   border: none;
   padding: 18px 0 18px 16px;
@@ -26,13 +27,16 @@ export const CityOfArrival = styled.input`
   }
 `;
 
-const Arrival = () => {
-  return (
-    <ArrivalLayout>
-      <CityOfArrival placeholder="Город прибытия" />
-    </ArrivalLayout>
-  )
+export default class SearchArrival extends React.Component {
+	render() {
+		return (
+			<SearchArrivalLayout>
+				<SearchCityOfArrival placeholder="Город прибытия" />
+			</SearchArrivalLayout>
+  	)
+	}
 }
 
-export default Arrival;
+
+
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import CalendarIcon from '../Images/minicalendar.png';
-
-export const ThereLayout = styled.div`
+import {ThereLayout, ThereInput, CalendarImgLayout, Calendar, CalendarImg} from '../../../HomePage/components/There';
+import CalendarIcon from '../../../HomePage/Images/minicalendar.png';
+export const SearchThereLayout = styled(ThereLayout)`
   display: flex;
   width: 50%;
   margin: 0 0 2px 0;
@@ -15,7 +15,7 @@ export const ThereLayout = styled.div`
   }
 `;
 
-export const ThereInput = styled.input`
+export const SearchThereInput = styled(ThereInput)`
   width: 100%;
   margin: 0 2px 0 0;
   border: none;
@@ -28,7 +28,7 @@ export const ThereInput = styled.input`
   }
 `;
 
-export const CalendarImgLayout = styled.div`
+const SearchCalendarImgLayout = styled(CalendarImgLayout)`
   display: flex;
   position: absolute;
   right: 0;
@@ -36,25 +36,25 @@ export const CalendarImgLayout = styled.div`
   top: 0;
   margin: 17px 0 0 0;
 `;
-export const Calendar = styled.div`
+const SearchCalendar = styled(Calendar)`
   display: flex;
   flex-direction: column;
   margin: 0 16px 0 0;
   align-items: center;
 `;
 
-export const CalendarImg = styled.img``;
+const SearchCalendarImg = styled(CalendarImg);
 
 const There = () => {
   return (
-    <ThereLayout>
-      <ThereInput placeholder="Туда" />
-      <CalendarImgLayout>
-        <Calendar>
-          <CalendarImg src={CalendarIcon} alt="Calendar" />
-        </Calendar>
-      </CalendarImgLayout>
-    </ThereLayout>
+    <SearchThereLayout>
+      <SearchThereInput placeholder="Туда" />
+      <SearchCalendarImgLayout>
+        <SearchCalendar>
+          <SearchCalendarImg src={CalendarIcon} alt="Calendar" />
+        </SearchCalendar>
+      </SearchCalendarImgLayout>
+    </SearchThereLayout>
   )
 }
 

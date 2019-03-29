@@ -150,13 +150,12 @@ class TicketsComponent extends React.Component {
           <label className="Label" htmlFor="three_transplantation" />
           <BusinessClass>Бизнес-класс</BusinessClass>
         </BusinessClassCheckBox> 
-         
       </TicketsSection>
     )
   }
 } 
 
-export default class AddTickets extends React.Component { 
+export default class SearchAddTickets extends React.Component { 
   constructor(props) {
     super(props);
     this.state = {

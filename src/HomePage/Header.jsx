@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import logo from './Images/aviasales.png';
 import logoText from './Images/LogoText.png';
-import Aircraft from './Images/aero.svg';
 import Departure from  './components/Departure';
 import Arrival from './components/Arrival';
 import There from './components/There';
 import Back from './components/Back';
 import AddTickets from './components/AddTickets';
+import SearchTicket from './components/SearchTicket';
 
-export const HeaderStyle = styled.div`
+const HeaderStyle = styled.div`
   background: linear-gradient(#00b0de, #01aedc, #02abdb, #02abdb, #02abdb, #196ebd);
 `;
 
@@ -33,7 +32,7 @@ export const LogoImg = styled.img`
   margin-right: 12px;
 `;
 
-const LogoText = styled.img`
+export const LogoText = styled.img`
   @media screen and (min-width: 320px) {
     display: none;
   }
@@ -94,12 +93,7 @@ export const Main = styled.div`
   flex-wrap: wrap;
 `;
 
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
-
-export const Button = styled.div`
+export const ButtonFind = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
@@ -114,41 +108,6 @@ export const Button = styled.div`
     padding: 48px 0 254px 0;
   }
 `;
-
-export const ButtonFindTickets = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ff9241;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 900;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  padding: 14px 24px 14px 45px;
-  @media screen and (min-width: 566px) {
-    width: auto;
-    justify-content: center;
-  }
-`;
-
-export const AircraftIcon = styled.img`
-  margin-left: 16px;
-  @media screen and (min-width: 566px) {
-    margin: 0 0 0 24px;
-  }
-`;
-
-export const Calendar = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 16px 0 0;
-  align-items: center;
-`;
-
-export const CalendarImg = styled.img``;
 
 const Header = () => (
   <HeaderStyle>
@@ -175,11 +134,7 @@ const Header = () => (
     </div>
     <div className="container">
       <div className="className='col-xs-12">
-        <Button>
-          <StyledLink to="/search">
-            <ButtonFindTickets>Найти билеты<AircraftIcon src={Aircraft}/></ButtonFindTickets>
-          </StyledLink>
-        </Button>
+        <SearchTicket/>
       </div>
     </div>
   </HeaderStyle>

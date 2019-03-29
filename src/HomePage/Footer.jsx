@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Vk from './Images/footer-vk.svg';
-import Facebook from './Images/footer-facebook.svg';
-import Instagram from './Images/footer-instagram.svg';
-import Twitter from './Images/footer-twitter.svg';
-import Viber from './Images/footer-viber.svg';
+import Vk from './Images/vk-footer.png';
+import Facebook from './Images/facebook.png';
+import Instagram from './Images/instagram.png';
+import Twitter from './Images/twitter-footer.png';
+import Viber from './Images/viber-footer.png';
 import AppStoreImg from './Images/appstore.png';
 import GoogleMarketImg from './Images/googlemarket.png';
 import WindowsPhoneImg from './Images/windowsphone.png';
@@ -87,6 +87,7 @@ const SocialImg = styled.img`
   margin: 0 0 0 0;
   &:nth-last-child(1) {
     margin-right: 12px;
+  }
 `;
 
 const SocialMediaText = styled.p`
@@ -224,60 +225,36 @@ const Footer = () => {
             <div className="row">
               <div className="col-xs-10 col-sm-12 col-md-12">
                 <AboutCompanyForUser>
-                  <AboutCompany>
-                    О компании
-                  </AboutCompany>
-                  <AboutCompany>
-                    Партнёрская программа
-                  </AboutCompany>
-                  <AboutCompany>
-                    Реклама
-                  </AboutCompany>
-                  <AboutCompany>
-                    Вакансии
-                  </AboutCompany>
-                  <AboutCompany>
-                    Помощь
-                  </AboutCompany>
-                  <AboutCompany>
-                    Правила
-                  </AboutCompany>
-                  <AboutCompany>
-                    White Label авиабилеты
-                  </AboutCompany>
+                  <AboutCompany>О компании</AboutCompany>
+                  <AboutCompany>Партнёрская программа</AboutCompany>
+                  <AboutCompany>Реклама</AboutCompany>
+                  <AboutCompany>Вакансии</AboutCompany>
+                  <AboutCompany>Помощь</AboutCompany>
+                  <AboutCompany>Правила
+                  </AboutCompany><AboutCompany>White Label авиабилеты</AboutCompany>
                 </AboutCompanyForUser>
               </div>
               <div className="col-xs-12">
                 <SocialSection>
                   <SocialMedia>
                     <SocialImg src={Vk} />
-                    <SocialMediaText>
-                      Вконтакте
-                    </SocialMediaText>
+                    <SocialMediaText>Вконтакте</SocialMediaText>
                   </SocialMedia>
                   <SocialMedia>
                     <SocialImg src={Facebook} />
-                    <SocialMediaText>
-                      Фейсбук
-                    </SocialMediaText>
+                    <SocialMediaText>Фейсбук</SocialMediaText>
                   </SocialMedia>
                   <SocialMedia>
                     <SocialImg src={Instagram} />
-                    <SocialMediaText>
-                      Инстаграм
-                    </SocialMediaText>
+                    <SocialMediaText>Инстаграм</SocialMediaText>
                   </SocialMedia>
                   <SocialMedia>
                     <SocialImg src={Twitter} />
-                    <SocialMediaText>
-                      Твиттер
-                    </SocialMediaText>
+                    <SocialMediaText>Твиттер</SocialMediaText>
                   </SocialMedia>
                   <SocialMedia>
                     <SocialImg src={Viber} />
-                    <SocialMediaText>
-                      Вайбер
-                    </SocialMediaText>
+                    <SocialMediaText>Вайбер</SocialMediaText>
                   </SocialMedia>
                 </SocialSection>
               </div>
@@ -313,9 +290,7 @@ const Footer = () => {
                 </Link>
               </DownloadApp>
             </Download>
-            <Inc>
-              © 2007–2018, Aviasales — дешевые авиабилеты
-            </Inc>
+            <Inc>© 2007–2018, Aviasales — дешевые авиабилеты</Inc>
           </div>
         </div>
       </div>
